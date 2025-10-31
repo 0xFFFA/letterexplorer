@@ -71,12 +71,23 @@ class EasyOCRProcessor:
             print(f"⚠️  Ошибка при извлечении таблиц: {e}")
             return []
     
-    def extract_text_from_image(self, image_path: Path) -> str:
-        """Извлекает весь текст со страницы используя Tesseract"""
+    def extract_text_from_image(self, image_path: Path, exclude_bboxes: List = None) -> str:
+        """Извлекает весь текст со страницы используя Tesseract, исключая области таблиц"""
         try:
+            # Загружаем изображение
+            from PIL import ImageDraw
+            image = Image.open(image_path)
+            
+            # Если есть области для исключения (таблицы), закрашиваем их белым
+            if exclude_bboxes:
+                draw = ImageDraw.Draw(image)
+                for bbox in exclude_bboxes:
+                    # bbox содержит x1, y1, x2, y2
+                    draw.rectangle([bbox.x1, bbox.y1, bbox.x2, bbox.y2], fill='white')
+            
             # Используем pytesseract для обычного текста (быстрее чем EasyOCR)
             text = pytesseract.image_to_string(
-                str(image_path),
+                image,
                 lang='rus+eng',
                 config='--psm 6'
             )
@@ -137,9 +148,10 @@ class EasyOCRProcessor:
         else:
             print("ℹ️  Таблицы не найдены")
         
-        # Извлекаем текст
+        # Извлекаем текст, исключая области таблиц
         print("📝 Извлечение текста...")
-        text = self.extract_text_from_image(image_path)
+        table_bboxes = [table['bbox'] for table in tables] if tables else None
+        text = self.extract_text_from_image(image_path, exclude_bboxes=table_bboxes)
         
         if text:
             result_parts.append("## Текст\n")
