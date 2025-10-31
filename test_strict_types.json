@@ -1,0 +1,14 @@
+{
+  "file_info": {
+    "filename": "01-0530_6856.txt",
+    "processing_method": "two_stage_separate_prompts",
+    "total_prompts": 6
+  },
+  "extracted_data": {
+    "document_info_raw": "```\n{\n\"document_info\": {\n\"document_number\": \"01-2550\",\n\"date\": \"04.2025\",\n\"addressees\": [\"Начальнику ЭСПЦ\", \"Начальнику СПЦ-1\", \"Начальнику УП\", \"Начальнику УТК\", \"Начальнику УСПЭР\", \"Начальнику УСБ\", \"Начальнику УЭИО\"]\n}\n}\n```",
+    "document_title_raw": "```\n{\n\"document_title\": {\n\"document_name\": \"Производство\",\n\"document_subname\": \"г/к сортового проката стали марки 6856\",\n\"order_requirement\": null,\n\"variant_naumber\": null,\n\"code_OEMK\": null,\n\"code_production\": \"6856\",\n\"export_name\": null,\n\"conventional_name\": null,\n\"smelting_standart\": null,\n\"consumer_property\": null\n}\n}\n```",
+    "chemical_composition_raw": "```\n{\n\"chemical_composition\": {\n\"recommended\": {\"Pexomena\": \"0,42\"},\n\"certificate\": {\"Pexomena\": \"0,40\", \"неизвестный элемент1\": \"0,15\", \"неизвестный элемент2\": \"0,80\", \"неизвестный элемент3\": \"0,020\"},\n\"espz\": {\"Pexomena\": \"0,45\", \"неизвестный элемент4\": \"0,30\", \"неизвестный элемент5\": \"0,90\", \"неизвестный элемент6\": \"0,035\", \"неизвестный элемент7\": \"0,025\", \"неизвестный элемент8\": \"1,10\", \"неизвестный элемент9\": \"0,25\", \"неизвестный элемент10\": \"0,20\"}\n}\n}\n```",
+    "technical_requirements_raw": "```\n{\n  \"technical_requirements\": {\n    \"production_process\": \"нагрев НЛЗ осуществлять по 7 группе ТИ П.ОЗ-94, прокатку проводить по ТИ П.ОЗ-98\",\n    \"notes\": [],\n    \"requirements\": [\n      {\"number\": \"1\", \"text\": \"нагрев НЛЗ осуществлять по 7 группе ТИ П.ОЗ-94\"},\n      {\"number\": \"2\", \"text\": \"прокатку проводить по ТИ П.ОЗ-98\"}\n    ]\n  }\n}\n```",
+    "tables_raw": "```\n{\n  \"tables\": [\n    {\n      \"table_number\": \"1\",\n      \"type\": \"null\",\n      \"data\": \"null\"\n    },\n    {\n      \"table_number\": \"2\",\n      \"type\": \"null\",\n      \"data\": \"null\"\n    },\n    {\n      \"table_number\": \"3\",\n      \"type\": \"null\",\n      \"data\": \"null\"\n    },\n    {\n      \"table_number\": \"4\",\n      \"type\": \"null\",\n      \"data\": \"null\"\n    },\n    {\n      \"table_number\": \"5\",\n      \"type\": \"null\",\n      \"data\": \"null\"\n    },\n    {\n      \"table_number\": \"6\",\n      \"type\": \"null\",\n      \"data\": \"null\"\n    }\n  ]\n}\n```"
+  }
+}

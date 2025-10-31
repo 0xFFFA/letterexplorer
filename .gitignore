@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# OCR output
+output/
+output_trocr/
+
+# JSON output (временные результаты)
+json_output/
+*.tmp.json
+*_error.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+ocr_tables_log.txt
+
+# Временные файлы
+*.bak
+*.tmp
+
